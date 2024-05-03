@@ -1,2 +1,3 @@
 # Potato-Prices-Prediction
-Project aims to forecast potato prices in India using LSTM, KNN, and Random Forest Regression, integrating historical data on prices, regional stats, and rainfall patterns. Targeting agricultural stakeholders for informed decision-making.
+This project aims to assess the effectiveness of LSTM, KNN, and a pre-trained Random Forest regressor in forecasting potato prices in India. Leveraging historical datasets on potato prices, regional statistics, and rainfall patterns, the models will predict future price trends. By integrating temporal sequences, regional disparities, and environmental factors, the study seeks to provide stakeholders in the agricultural sector with reliable insights for informed decision-making. Ultimately, the project aims to enhance understanding of market trends and facilitate more strategic economic decisions in the volatile agriculture market.
+
