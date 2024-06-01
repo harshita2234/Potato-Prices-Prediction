@@ -8,20 +8,20 @@ This project aims to predict the prices of potatoes using historical data. The m
 
 ## Project Steps
 
-1. **Data Collection**: We used three datasets - `potato.csv`, `rainfall_news.csv`, and `state.csv` to create the final dataset `final_potato_rainfall_data.csv`.
-2. **Data Preprocessing**: The final dataset was cleaned and preprocessed to ensure accuracy and reliability. The preprocessing steps are as follows:
+1. **Data Collection and Preprocessing**: We used three datasets - `potato.csv`, `rainfall_news.csv`, and `state.csv` to create the final dataset `final_potato_rainfall_data.csv`. `preprocessing-steps.py` explain how to do so.
+2. **Data Cleaning**: The final dataset was cleaned to ensure accuracy and reliability. The steps are as follows:
 
     ```python
     import pandas as pd
 
     # Load the final output CSV file
-    final_data = pd.read_csv('path/to/file/final_potato_rainfall_data.csv')
+    final_data = pd.read_csv('final_potato_rainfall_data.csv')
 
     # Remove rows where any key field is NaN
     final_data_cleaned = final_data.dropna(subset=['state', 'date', 'rainfall', 'price'])
 
     # Save the cleaned final output back to a CSV file
-    final_data_cleaned.to_csv('path/to/file/final_potato_rainfall_data_cleaned.csv', index=False)
+    final_data_cleaned.to_csv('final_potato_rainfall_data_cleaned.csv', index=False)
 
     print("Data cleaning complete. Clean output saved to 'final_potato_rainfall_data_cleaned.csv'.")
     ```
@@ -50,7 +50,7 @@ pip install pandas numpy scikit-learn matplotlib seaborn tensorflow
     ```
 3. Ensure you have the cleaned data file in the appropriate directory:
     ```bash
-    mv path/to/file/final_potato_rainfall_data_cleaned.csv .
+    mv final_potato_rainfall_data_cleaned.csv .
     ```
 4. Run the models:
     ```bash
