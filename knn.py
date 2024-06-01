@@ -6,7 +6,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.pipeline import Pipeline
 
 # Load the dataset
-#file_path = '/mnt/data/final_potato_rainfall_data_cleaned.csv'
+#file_path = '/data/final_potato_rainfall_data_cleaned.csv'
 data = pd.read_csv("final_potato_rainfall_data_cleaned.csv")
 
 # Preprocess the data (assuming necessary steps are taken to prepare the data)
