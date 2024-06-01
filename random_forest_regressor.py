@@ -51,7 +51,6 @@ print(f'Random Forest R^2 score: {rf_score}')
 import matplotlib.pyplot as plt
 y_pred = rf_regressor.predict(X_test)
 
-# Assuming y_test and y_pred are already defined from the previous model runs
 # Generate a scatter plot of actual vs predicted prices
 plt.figure(figsize=(10, 6))
 plt.scatter(y_test, y_pred, alpha=0.3, color='blue', label='Predictions')
@@ -63,7 +62,6 @@ plt.legend()
 plt.show()
 import matplotlib.pyplot as plt
 
-# Assuming y_test and y_pred are defined from model predictions
 plt.figure(figsize=(12, 6))
 
 # Histogram of actual prices
