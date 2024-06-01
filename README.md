@@ -8,7 +8,7 @@ This project aims to predict the prices of potatoes using historical data. The m
 
 ## Project Steps
 
-1. **Data Collection**: We used three datasets - `potato`, `rainfall_news`, and `state` to create the final dataset `initial_potato_rainfall_data.csv`.
+1. **Data Collection**: We used three datasets - `potato.csv`, `rainfall_news.csv`, and `state.csv` to create the final dataset `final_potato_rainfall_data.csv`.
 2. **Data Preprocessing**: The final dataset was cleaned and preprocessed to ensure accuracy and reliability. The preprocessing steps are as follows:
 
     ```python
