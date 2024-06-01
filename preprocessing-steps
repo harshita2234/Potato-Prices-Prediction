@@ -1,9 +1,9 @@
 import pandas as pd
 
 # Load the data from the provided CSV files
-potato_data = pd.read_csv(r"C:\Users\charu\OneDrive\Desktop\potato.csv")
-states_data = pd.read_csv(r"C:\Users\charu\OneDrive\Desktop\states.csv")
-rainfall_data = pd.read_csv(r"C:\Users\charu\OneDrive\Desktop\rainfall_new.csv")
+potato_data = pd.read_csv(r"potato.csv")
+states_data = pd.read_csv(r"states.csv")
+rainfall_data = pd.read_csv(r"rainfall_new.csv")
 
 # Cleaning up the states data by removing unnecessary columns
 states_data = states_data[['State', 'District']]
