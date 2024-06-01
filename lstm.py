@@ -67,9 +67,6 @@ print(predictions)  # Add your comparison or visualization here
 # Predict on the test set
 predictions = model.predict(X_test)
 
-# Scale back the predictions and actuals if you had normalized the targets
-# predictions = scaler.inverse_transform(predictions)
-# actuals = scaler.inverse_transform(y_test.reshape(-1, 1))
 
 # Plot the results
 plt.figure(figsize=(10, 6))
