@@ -6,42 +6,38 @@ This repository contains the code and data for predicting potato prices based on
 
 This project aims to predict the prices of potatoes using historical data. The model can help farmers and traders make informed decisions by analysing patterns and trends.
 
-## Features
+## Project Steps
 
-- Data collection and preprocessing
-- Exploratory Data Analysis (EDA)
-- Model training and evaluation
-- Prediction and visualization
+1. **Data Collection**: We used three datasets - `potato`, `rainfall_news`, and `state` to create the final dataset `initial_potato_rainfall_data.csv`.
+2. **Data Preprocessing**: The final dataset was cleaned and preprocessed to ensure accuracy and reliability. The preprocessing steps are as follows:
 
-## Data
+    ```python
+    import pandas as pd
 
-The data used in this project includes historical potato prices and rainfall data from various states. The final data used for training the model is stored in `final_potato_rainfall_data.csv`.
+    # Load the final output CSV file
+    final_data = pd.read_csv('path/to/file/final_potato_rainfall_data.csv')
 
-## Preprocessing Steps
+    # Remove rows where any key field is NaN
+    final_data_cleaned = final_data.dropna(subset=['state', 'date', 'rainfall', 'price'])
 
-Before training the model, the data is cleaned and preprocessed to ensure accuracy and reliability. The preprocessing steps are as follows:
+    # Save the cleaned final output back to a CSV file
+    final_data_cleaned.to_csv('path/to/file/final_potato_rainfall_data_cleaned.csv', index=False)
 
-```python
-import pandas as pd
+    print("Data cleaning complete. Clean output saved to 'final_potato_rainfall_data_cleaned.csv'.")
+    ```
+3. **Modeling**: The cleaned data was used to train the following models:
+    - K-Nearest Neighbors (KNN)
+    - Long Short-Term Memory (LSTM)
+    - Random Forest Regressor
 
-# Load the final output CSV file
-final_data = pd.read_csv('path/to/file/initial_potato_rainfall_data.csv')
-
-# Remove rows where any key field is NaN
-final_data_cleaned = final_data.dropna(subset=['state', 'date', 'rainfall', 'price'])
-
-# Save the cleaned final output back to a CSV file
-final_data_cleaned.to_csv('path/to/file/final_potato_rainfall_data_cleaned.csv', index=False)
-
-print("Data cleaning complete. Clean output saved to 'final_potato_rainfall_data_cleaned.csv'.")
-```
 ## Installation
 
 You need to have Python installed to run the code in this repository. You can install the necessary libraries using the following command:
 
 ```bash
-pip install pandas==1.2.3 numpy==1.20.1 scikit-learn==0.24.1 matplotlib==3.3.4 seaborn==0.11.1
+pip install pandas numpy scikit-learn matplotlib seaborn tensorflow
 ```
+
 ## Usage
 
 1. Clone this repository:
@@ -56,17 +52,11 @@ pip install pandas==1.2.3 numpy==1.20.1 scikit-learn==0.24.1 matplotlib==3.3.4 s
     ```bash
     mv path/to/file/final_potato_rainfall_data_cleaned.csv .
     ```
-4. Run the data preprocessing script:
+4. Run the models:
     ```bash
-    python preprocess_data.py
-    ```
-5. Train the model:
-    ```bash
-    python train_model.py
-    ```
-6. Make predictions:
-    ```bash
-    python predict.py
+    python knn.py
+    python lstm.py
+    python regressor.py
     ```
 
 ## Contributing
