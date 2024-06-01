@@ -7,9 +7,7 @@ from tensorflow.keras.layers import LSTM, Dense, Dropout
 import matplotlib.pyplot as plt
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 # Load the dataset
-#file_path = "C:\Users\charu\Downloads\final_potato_rainfall_data_cleaned.csv"
-# Update the path to your dataset
-data = pd.read_csv(r"C:\Users\charu\Downloads\final_potato_rainfall_data_cleaned.csv")
+data = pd.read_csv("final_potato_rainfall_data_cleaned.csv")
 data['date'] = pd.to_datetime(data['date'], format='%d-%m-%Y')
 label_encoder = LabelEncoder()
 data['state'] = label_encoder.fit_transform(data['state'])
