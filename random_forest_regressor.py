@@ -9,7 +9,7 @@ from sklearn.metrics import r2_score
 import joblib
 
 # Load and preprocess the dataset
-data = pd.read_csv(r"C:\Users\charu\Downloads\final_potato_rainfall_data_cleaned.csv")
+data = pd.read_csv("final_potato_rainfall_data_cleaned.csv")
 data['date'] = pd.to_datetime(data['date'], format='%d-%m-%Y')
 data_sorted = data.sort_values(by=['state', 'date'])
 data_sorted['year'] = data_sorted['date'].dt.year
