@@ -56,7 +56,7 @@ pip install pandas numpy scikit-learn matplotlib seaborn tensorflow
     ```bash
     python knn.py
     python lstm.py
-    python regressor.py
+    python random_forest_regressor.py
     ```
 
 ## Contributing
